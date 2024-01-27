@@ -78,6 +78,7 @@ fun DependencyHandler.testDependencies() {
     androidTestImplementation(Libraries.Test.junitExtKtx)
     androidTestImplementation(Libraries.Test.truthExt)
     testImplementation(Libraries.Test.mockWebServer)
+    testImplementation(Libraries.Test.coroutineTest)
 }
 
 fun DependencyHandler.timeDependencies() {

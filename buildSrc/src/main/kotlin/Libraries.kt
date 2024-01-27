@@ -14,6 +14,7 @@ import Version.SplashScreenApi
 import Version.TestRunnerVersion
 import Version.ThreeTenVersion
 import Version.TruthExt
+import Version.coroutineTestVersion
 import Version.mockWebserverVersion
 import Version.okHttpVersion
 import Version.retrofitRxVersion
@@ -43,6 +44,7 @@ object Version {
     const val okHttpVersion = "5.0.0-alpha.2"
     const val retrofitRxVersion = "2.6.2"
     const val ThreeTenVersion = "1.6.8"
+    const val coroutineTestVersion = "1.7.3"
 }
 
 object Libraries {
@@ -103,6 +105,7 @@ object Libraries {
         const val truthExt = "androidx.test.ext:truth:$TruthExt"
         const val runner = "androidx.test:runner:$TestRunnerVersion"
         const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$mockWebserverVersion"
+        const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
     }
     object Time {
         const val ThreeTen = "org.threeten:threetenbp:$ThreeTenVersion"

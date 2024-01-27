@@ -1,5 +1,9 @@
 package com.blinkist.data.remote
 
-interface BooksApi {
+import com.blinkist.data.model.BookResponse
+import retrofit2.http.GET
 
+interface BooksApi {
+    @GET("books")
+    suspend fun getBooks(): List<BookResponse>
 }
