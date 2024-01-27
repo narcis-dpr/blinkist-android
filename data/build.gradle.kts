@@ -9,4 +9,6 @@ android {
 dependencies {
     CORE
     retrofitDependencies()
+    baseDependencies()
+    testDependencies()
 }

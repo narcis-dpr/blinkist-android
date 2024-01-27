@@ -13,6 +13,10 @@ import Version.NavigationCompose
 import Version.SplashScreenApi
 import Version.TestRunnerVersion
 import Version.TruthExt
+import Version.mockWebserverVersion
+import Version.okHttpVersion
+import Version.retrofitRxVersion
+import Version.retrofitVersion
 
 object Version {
     const val CoreKtx = "1.9.0"
@@ -33,8 +37,10 @@ object Version {
     const val JunitExtKtx = "1.1.5"
     const val Accompanist = "0.28.0"
     const val TruthExt = "1.5.0"
-    const val Media3 = "1.0.0-rc02"
-    const val CameraXVersion = "1.3.0-alpha05"
+    const val mockWebserverVersion = "4.11.0"
+    const val retrofitVersion = "2.9.0"
+    const val okHttpVersion = "5.0.0-alpha.2"
+    const val retrofitRxVersion = "2.6.2"
 }
 
 object Libraries {
@@ -51,11 +57,11 @@ object Libraries {
         const val guava = "com.google.guava:guava:$GuavaAndroid"
     }
     object Retrofit {
-        const val retrofit2 = "com.squareup.retrofit2:retrofit:2.9.0"
-        const val gsonConverter = "com.squareup.retrofit2:converter-gson:2.9.0"
-        const val okHttp = "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
-        const val okhttp3Interceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
-        const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:2.6.2"
+        const val retrofit2 = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+        const val gsonConverter = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+        const val okHttp = "com.squareup.okhttp3:okhttp:$okHttpVersion"
+        const val okhttp3Interceptor = "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+        const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:$retrofitRxVersion"
     }
 
     object Hilt {
@@ -94,6 +100,7 @@ object Libraries {
         const val junitExtKtx = "androidx.test.ext:junit-ktx:$JunitExtKtx"
         const val truthExt = "androidx.test.ext:truth:$TruthExt"
         const val runner = "androidx.test:runner:$TestRunnerVersion"
+        const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$mockWebserverVersion"
     }
     object Accompanist {
         const val pager =

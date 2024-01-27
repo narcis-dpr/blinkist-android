@@ -10,6 +10,9 @@ fun DependencyHandler.kapt(dependencyNotation: Any): Dependency? =
 fun DependencyHandler.androidTestImplementation(dependencyNotation: Any): Dependency? =
     add("androidTestImplementation", dependencyNotation)
 
+fun DependencyHandler.testImplementation(dependencyNotation: Any): Dependency? =
+    add("testImplementation", dependencyNotation)
+
 fun DependencyHandler.baseDependencies() {
     implementation(Libraries.AndroidX.appCompat)
     implementation(Libraries.AndroidX.coreKtx)
@@ -74,6 +77,7 @@ fun DependencyHandler.testDependencies() {
     androidTestImplementation(Libraries.Test.runner)
     androidTestImplementation(Libraries.Test.junitExtKtx)
     androidTestImplementation(Libraries.Test.truthExt)
+    testImplementation(Libraries.Test.mockWebServer)
 }
 
 fun DependencyHandler.moduleDependencies() {
