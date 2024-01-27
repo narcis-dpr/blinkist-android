@@ -20,6 +20,13 @@ fun DependencyHandler.baseDependencies() {
     kapt(Libraries.Hilt.hiltCompiler)
     implementation(Libraries.Google.guava)
 }
+fun DependencyHandler.retrofitDependencies() {
+    implementation(Libraries.Retrofit.retrofit2)
+    implementation(Libraries.Retrofit.gsonConverter)
+    implementation(Libraries.Retrofit.okHttp)
+    implementation(Libraries.Retrofit.okhttp3Interceptor)
+    implementation(Libraries.Retrofit.retrofitRx)
+}
 fun DependencyHandler.accompanistDependencies() {
     implementation(Libraries.Accompanist.pager)
     implementation(Libraries.Accompanist.swiperefresh)
@@ -71,7 +78,11 @@ fun DependencyHandler.testDependencies() {
 
 fun DependencyHandler.moduleDependencies() {
     DATA
+    CORE
 }
 
 val DependencyHandler.DATA
     get() = implementation(project(mapOf("path" to ":data")))
+
+val DependencyHandler.CORE
+    get() = implementation(project(mapOf("path" to ":core")))

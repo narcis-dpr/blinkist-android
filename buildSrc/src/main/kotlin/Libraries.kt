@@ -50,6 +50,13 @@ object Libraries {
         const val gson = "com.google.code.gson:gson:$GsonVersion"
         const val guava = "com.google.guava:guava:$GuavaAndroid"
     }
+    object Retrofit {
+        const val retrofit2 = "com.squareup.retrofit2:retrofit:2.9.0"
+        const val gsonConverter = "com.squareup.retrofit2:converter-gson:2.9.0"
+        const val okHttp = "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+        const val okhttp3Interceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+        const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:2.6.2"
+    }
 
     object Hilt {
         const val hiltAndroid = "com.google.dagger:hilt-android:$HiltAndroidVersion"
