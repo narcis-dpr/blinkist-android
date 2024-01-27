@@ -18,7 +18,7 @@ object Version {
     const val CoreKtx = "1.9.0"
     const val AppCompat = "1.6.1"
     const val LifecycleRunTimeKtx = "2.3.1"
-    const val SplashScreenApi = "1.1.0-alpha01"
+    const val SplashScreenApi = "1.0.1"
     const val GsonVersion = "2.10.1"
     const val GuavaAndroid = "31.0.1-android"
     const val HiltNavigationCompose = "1.0.0"
