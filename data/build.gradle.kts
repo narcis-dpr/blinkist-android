@@ -11,4 +11,5 @@ dependencies {
     retrofitDependencies()
     baseDependencies()
     testDependencies()
+    timeDependencies()
 }

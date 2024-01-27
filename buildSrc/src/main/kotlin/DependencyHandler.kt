@@ -80,6 +80,10 @@ fun DependencyHandler.testDependencies() {
     testImplementation(Libraries.Test.mockWebServer)
 }
 
+fun DependencyHandler.timeDependencies() {
+    implementation(Libraries.Time.ThreeTen)
+}
+
 fun DependencyHandler.moduleDependencies() {
     DATA
     CORE
