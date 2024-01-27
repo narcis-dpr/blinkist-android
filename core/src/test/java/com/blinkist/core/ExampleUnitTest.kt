@@ -1,4 +1,4 @@
-package com.blinkist.data
+package com.blinkist.core
 
 import org.junit.Test
 
