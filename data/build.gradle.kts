@@ -12,4 +12,5 @@ dependencies {
     baseDependencies()
     testDependencies()
     timeDependencies()
+    roomDependencies()
 }
