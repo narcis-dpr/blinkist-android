@@ -2,8 +2,6 @@ package com.blinkslabs.blinkist.android.challenge.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.blinkslabs.blinkist.android.challenge.CoroutinesTestRule
-import com.blinkslabs.blinkist.android.challenge.data.BooksService
-import com.blinkslabs.blinkist.android.challenge.data.model.Book
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
