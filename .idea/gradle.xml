@@ -24,6 +24,10 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/data" />
+            <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/bookList" />
+            <option value="$PROJECT_DIR$/theme" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
