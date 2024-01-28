@@ -1,3 +1,4 @@
+
 import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
@@ -29,6 +30,11 @@ fun DependencyHandler.retrofitDependencies() {
     implementation(Libraries.Retrofit.okHttp)
     implementation(Libraries.Retrofit.okhttp3Interceptor)
     implementation(Libraries.Retrofit.retrofitRx)
+}
+fun DependencyHandler.roomDependencies() {
+    implementation(Libraries.Room.roomRuntime)
+    implementation(Libraries.Room.roomCompiler)
+    implementation(Libraries.Room.roomKtx)
 }
 fun DependencyHandler.accompanistDependencies() {
     implementation(Libraries.Accompanist.pager)
@@ -88,6 +94,8 @@ fun DependencyHandler.timeDependencies() {
 fun DependencyHandler.moduleDependencies() {
     DATA
     CORE
+    DOMAIN
+    THEME
 }
 
 val DependencyHandler.DATA
@@ -95,3 +103,9 @@ val DependencyHandler.DATA
 
 val DependencyHandler.CORE
     get() = implementation(project(mapOf("path" to ":core")))
+
+val DependencyHandler.DOMAIN
+    get() = implementation(project(mapOf("path" to ":domain")))
+
+val DependencyHandler.THEME
+    get() = implementation(project(mapOf("path" to ":theme")))

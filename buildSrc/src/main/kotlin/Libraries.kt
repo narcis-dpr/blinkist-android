@@ -19,6 +19,7 @@ import Version.mockWebserverVersion
 import Version.okHttpVersion
 import Version.retrofitRxVersion
 import Version.retrofitVersion
+import Version.roomVersion
 
 object Version {
     const val CoreKtx = "1.9.0"
@@ -45,6 +46,7 @@ object Version {
     const val retrofitRxVersion = "2.6.2"
     const val ThreeTenVersion = "1.6.8"
     const val coroutineTestVersion = "1.7.3"
+    const val roomVersion = "2.4.1"
 }
 
 object Libraries {
@@ -75,6 +77,11 @@ object Libraries {
             "androidx.hilt:hilt-navigation-compose:$HiltNavigationCompose"
     }
 
+    object Room {
+        const val roomRuntime = "androidx.room:room-runtime:$roomVersion"
+        const val roomCompiler = "androidx.room:room-compiler:$roomVersion"
+        const val roomKtx = "androidx.room:room-ktx:$roomVersion"
+    }
     object Compose {
         const val composeBom = "androidx.compose:compose-bom:${Version.ComposeBom}"
         const val composeUi = "androidx.compose.ui:ui"
