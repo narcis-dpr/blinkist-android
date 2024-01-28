@@ -1,4 +1,4 @@
-package com.blinkslabs.blinkist.android.challenge.data.model
+package com.blinkist.core.model
 
 import org.threeten.bp.LocalDate
 
