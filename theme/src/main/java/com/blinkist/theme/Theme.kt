@@ -30,7 +30,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun PlayMateTheme(
+fun BlinkistTheme(
     darkTheme: Boolean = true,
     content: @Composable () -> Unit,
 ) {

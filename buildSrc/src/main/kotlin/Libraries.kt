@@ -14,12 +14,17 @@ import Version.SplashScreenApi
 import Version.TestRunnerVersion
 import Version.ThreeTenVersion
 import Version.TruthExt
+import Version.commonJunitVersion
 import Version.coroutineTestVersion
+import Version.junitFourVersion
+import Version.junitVersion
 import Version.mockWebserverVersion
+import Version.mockkVersion
 import Version.okHttpVersion
 import Version.retrofitRxVersion
 import Version.retrofitVersion
 import Version.roomVersion
+import Version.turbineVersion
 
 object Version {
     const val CoreKtx = "1.9.0"
@@ -47,6 +52,11 @@ object Version {
     const val ThreeTenVersion = "1.6.8"
     const val coroutineTestVersion = "1.7.3"
     const val roomVersion = "2.4.1"
+    const val junitFourVersion = "4.13.1"
+    const val junitVersion = "1.1.2"
+    const val commonJunitVersion = "4.12"
+    const val mockkVersion = "1.12.3"
+    const val turbineVersion = "0.12.0"
 }
 
 object Libraries {
@@ -113,6 +123,12 @@ object Libraries {
         const val runner = "androidx.test:runner:$TestRunnerVersion"
         const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$mockWebserverVersion"
         const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
+        const val commonJunit = "junit:junit:$commonJunitVersion"
+        const val junit4 = "junit:junit:$junitFourVersion"
+        const val junit = "androidx.test.ext:junit:$junitVersion"
+        const val mockK = "io.mockk:mockk:$mockkVersion"
+        const val turbine = "app.cash.turbine:turbine:$turbineVersion"
+        const val nhaarman = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-alpha01"
     }
     object Time {
         const val ThreeTen = "org.threeten:threetenbp:$ThreeTenVersion"

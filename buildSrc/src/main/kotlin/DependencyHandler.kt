@@ -14,6 +14,9 @@ fun DependencyHandler.androidTestImplementation(dependencyNotation: Any): Depend
 fun DependencyHandler.testImplementation(dependencyNotation: Any): Dependency? =
     add("testImplementation", dependencyNotation)
 
+fun DependencyHandler.annotationProcessor(dependencyNotation: Any): Dependency? =
+    add("annotationProcessor", dependencyNotation)
+
 fun DependencyHandler.baseDependencies() {
     implementation(Libraries.AndroidX.appCompat)
     implementation(Libraries.AndroidX.coreKtx)
@@ -33,7 +36,7 @@ fun DependencyHandler.retrofitDependencies() {
 }
 fun DependencyHandler.roomDependencies() {
     implementation(Libraries.Room.roomRuntime)
-    implementation(Libraries.Room.roomCompiler)
+    kapt(Libraries.Room.roomCompiler)
     implementation(Libraries.Room.roomKtx)
 }
 fun DependencyHandler.accompanistDependencies() {
@@ -85,6 +88,12 @@ fun DependencyHandler.testDependencies() {
     androidTestImplementation(Libraries.Test.truthExt)
     testImplementation(Libraries.Test.mockWebServer)
     testImplementation(Libraries.Test.coroutineTest)
+    testImplementation(Libraries.Test.junit4)
+    androidTestImplementation(Libraries.Test.junit)
+    testImplementation(Libraries.Test.commonJunit)
+    testImplementation(Libraries.Test.mockK)
+    testImplementation(Libraries.Test.turbine)
+    testImplementation(Libraries.Test.nhaarman)
 }
 
 fun DependencyHandler.timeDependencies() {
@@ -96,6 +105,7 @@ fun DependencyHandler.moduleDependencies() {
     CORE
     DOMAIN
     THEME
+    FEATURE_BOOK_LIST
 }
 
 val DependencyHandler.DATA
@@ -109,3 +119,7 @@ val DependencyHandler.DOMAIN
 
 val DependencyHandler.THEME
     get() = implementation(project(mapOf("path" to ":theme")))
+
+val DependencyHandler.FEATURE_BOOK_LIST
+    get() = implementation(project(mapOf("path" to ":feature:bookList")))
+

@@ -15,7 +15,7 @@ data class BookEntity (
     @ColumnInfo(name = "author")
     val author: String,
     @ColumnInfo(name ="publishDate")
-    val publishDate: LocalDate,
+    val publishDate: String,
     @ColumnInfo(name = "coverImageUrl")
     val coverImageUrl: String
     )
