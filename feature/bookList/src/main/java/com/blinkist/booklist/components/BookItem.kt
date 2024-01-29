@@ -57,7 +57,7 @@ fun BookItem(
                 modifier = Modifier
                     .size(30.dp)
                     .padding(2.dp)
-                    .clip(CircleShape),
+                    .clip(RoundedCornerShape(12.dp)),
                 contentScale = ContentScale.Crop,
                 placeholder = painterResource(id = R.drawable.baseline_book)
             )

@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.blinkist.booklist.components.BookItem
+import com.blinkist.booklist.components.SortSection
 import com.blinkist.booklist.viewModel.BooksViewModel
 import com.blinkist.booklist.viewModel.event.BookListEvent
 import com.blinkist.booklist.viewModel.state.BookListState
@@ -43,6 +44,7 @@ fun BookListScreen(
         ) {
             CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
         }
+        SortSection()
         SwipeRefresh(
             state = swipeRefreshState,
             onRefresh = {
