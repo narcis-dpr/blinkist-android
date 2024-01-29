@@ -94,6 +94,7 @@ fun DependencyHandler.testDependencies() {
     testImplementation(Libraries.Test.mockK)
     testImplementation(Libraries.Test.turbine)
     testImplementation(Libraries.Test.nhaarman)
+    testImplementation(Libraries.Test.arch)
 }
 
 fun DependencyHandler.timeDependencies() {

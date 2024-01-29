@@ -14,12 +14,14 @@ import Version.SplashScreenApi
 import Version.TestRunnerVersion
 import Version.ThreeTenVersion
 import Version.TruthExt
+import Version.archVersion
 import Version.commonJunitVersion
 import Version.coroutineTestVersion
 import Version.junitFourVersion
 import Version.junitVersion
 import Version.mockWebserverVersion
 import Version.mockkVersion
+import Version.nhharmVersion
 import Version.okHttpVersion
 import Version.retrofitRxVersion
 import Version.retrofitVersion
@@ -57,6 +59,8 @@ object Version {
     const val commonJunitVersion = "4.12"
     const val mockkVersion = "1.12.3"
     const val turbineVersion = "0.12.0"
+    const val archVersion = "2.2.0"
+    const val nhharmVersion = "2.0.0-alpha01"
 }
 
 object Libraries {
@@ -128,7 +132,8 @@ object Libraries {
         const val junit = "androidx.test.ext:junit:$junitVersion"
         const val mockK = "io.mockk:mockk:$mockkVersion"
         const val turbine = "app.cash.turbine:turbine:$turbineVersion"
-        const val nhaarman = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-alpha01"
+        const val nhaarman = "com.nhaarman.mockitokotlin2:mockito-kotlin:$nhharmVersion"
+        const val arch = "androidx.arch.core:core-testing:$archVersion"
     }
     object Time {
         const val ThreeTen = "org.threeten:threetenbp:$ThreeTenVersion"
