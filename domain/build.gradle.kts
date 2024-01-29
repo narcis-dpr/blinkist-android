@@ -9,4 +9,5 @@ android {
 dependencies {
     DATA
     CORE
+    timeDependencies()
 }
