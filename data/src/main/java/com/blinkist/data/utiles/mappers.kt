@@ -11,9 +11,9 @@ fun BookEntity.mapToBook() = Book(id, name, author, publishDate.toDateComponents
 fun Book.mapToBookEntity() = BookEntity(id, name, author, publishDate.toString(), coverImageUrl)
 
 fun BookResponse.mapToBook() = Book(id, name, author, publishDate.toDateComponents(), coverImageUrl)
+ fun Book.mapToBookResponse() = BookResponse(id = "1", name = name, publishDate = publishDate.toString(), author = author, coverImageUrl = coverImageUrl)
 
-
-private fun String.toDateComponents(): LocalDate {
+fun String.toDateComponents(): LocalDate {
     val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     return LocalDate.parse(this, formatter)
 }
