@@ -5,6 +5,6 @@ enum class SortOrder {
     DESCENDING
 }
 enum class SortBy {
-    TITLE,
-    DATE
+    NAME,
+    PublishDate
 }
