@@ -1,18 +1,25 @@
-👋 Hi there! Thanks for taking on the Blinkist Android Code Challenge.
+# sample book android application
 
-Please include the following information in this README:
+## This is a simple app of a list of categoriezed books
+to get a overall glance of the application check out this small preview:
+As you can see the view of the app is one single screen with a list of books.
+The stack of this application is kotlin and here is the list of the main tools that have been used for this project :Retrofit, Room, Hilt, Jetpack compose, junit, coroutines.
+The code base is multi module and here is a brief explanation of each module and their components :### 1- Build Src :
 
-- Instructions on how to run the project.
-- Your focus areas during development and any trade-offs you made, along with the reasons behind
-  them.
-- Specify the areas you primarily focused on, such as the architecture, data flow, UI, or any other
-  aspect.
-- Explain any trade-offs you made and provide your reasoning behind them.
-- Highlight the skills and areas of expertise that you believe are best exhibited in your project.
-- List any third-party libraries, copied-in code, or dependencies you used.
-- Clarify the source of the code you've included in your project, differentiating between code
-  written specifically for this project and code written at another time or by others. If you are
-  simply referencing a dependency via a dependency manager, you don't need to mention it here.
-- Include any other noteworthy information that you believe is relevant for evaluating the project.
-- Lastly, please refrain from using AI to generate the README, as it does not provide any indication
-  of your written communication style and may result in rejection of your challenge.
+The base module for every other parts of the app for managing depencies and libraries ### 2- theme :
+
+Basic theme setting, colors, some fonts, icons, typography, etc.### 3- data
+
+Class and api for server connection, database components, and one repository for connecting to data source### 4- domain
+
+The module that connects the view layer to data layer, a separate useCase for every access to sperate the concerns ### 5- presentation 
+Basic widgets, one main screen, viewmodel for handling the logic of composable screen, event handler for handling the triggered event by view and state for updating infos in the screen### 6- app
+
+Containg the one activity for the whole application and the app class that initiates hilt. ( we try to keep this module out of clutter)
+###What could have been done better?
+
+1- test coverage: the test coverage is at 50 percent or less
+
+2- more DRY code (there is is theory that if you have a code challenge work gets crazy that week! )
+
+
