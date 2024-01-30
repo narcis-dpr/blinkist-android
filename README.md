@@ -2,6 +2,12 @@
 
 ## This is a simple app of a list of categoriezed books
 to get a overall glance of the application check out this small preview:
+
+
+https://github.com/narcis-dpr/blinkist-android/assets/29674637/56d72414-67a1-465d-8dc3-3364231bacdb
+
+
+
 As you can see the view of the app is one single screen with a list of books.
 The stack of this application is kotlin and here is the list of the main tools that have been used for this project :Retrofit, Room, Hilt, Jetpack compose, junit, coroutines.
 The code base is multi module and here is a brief explanation of each module and their components :
