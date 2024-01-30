@@ -21,12 +21,4 @@ interface BooksDao {
     @Delete
     suspend fun deleteBook(bookEntity: BookEntity)
 
-    @Query(
-        """
-            SELECT * 
-            FROM Books 
-            WHERE LOWER(name) LIKE '%' || LOWER(:query) || '%'
-        """
-    )
-    suspend fun searchBook(query: String): BookEntity
 }

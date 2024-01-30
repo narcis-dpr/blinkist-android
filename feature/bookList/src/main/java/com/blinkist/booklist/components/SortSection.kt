@@ -43,7 +43,6 @@ import com.blinkist.booklist.R
 import com.blinkist.theme.GrayLight
 import com.blinkist.theme.Icons
 import com.blinkist.theme.LightPurple
-import com.blinkist.theme.LightTeal
 
 @Composable
 fun SortSectionHeader(

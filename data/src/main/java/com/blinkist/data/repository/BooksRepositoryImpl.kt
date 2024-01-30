@@ -13,11 +13,9 @@ class BooksRepositoryImpl @Inject constructor(
     private val booksDao: BooksDao,
 ) : BooksRepository {
     override suspend fun getAllBooks(): List<Book> {
-        val localBooks = booksDao.getAllBooks()
-        if (localBooks.isEmpty()) {
+        val remoteResult = booksApi.getBooks()
             try {
-                val remoteBooks = booksApi.getBooks()
-                val bookEntities = remoteBooks.map { it.mapToBook().mapToBookEntity() }
+                val bookEntities = remoteResult.map { it.mapToBook().mapToBookEntity() }
                 bookEntities.forEach {
                     booksDao.insertBook(it)
                 }
@@ -25,9 +23,8 @@ class BooksRepositoryImpl @Inject constructor(
             } catch (e: Exception) {
                 Log.e("Repository", e.message.toString())
             }
-        }
-        val remoteResult = booksApi.getBooks()
-        return remoteResult.map { it.mapToBook() }
+        val localBooks = booksDao.getAllBooks()
+        return localBooks.map { it.mapToBook() }
     }
 
     override suspend fun getBookById(id: String): Book {
