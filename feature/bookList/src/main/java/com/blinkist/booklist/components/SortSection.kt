@@ -7,6 +7,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
 import androidx.compose.animation.with
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -39,20 +40,22 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.blinkist.booklist.R
+import com.blinkist.theme.GrayLight
 import com.blinkist.theme.Icons
+import com.blinkist.theme.LightPurple
+import com.blinkist.theme.LightTeal
 
 @Composable
-fun SortSection(
-    sortOrder: SortOrder,
+fun SortSectionHeader(
     sortBy: SortBy,
-    onChangeSortOrder: (SortOrder) -> Unit,
     onChangeSortBy: (SortBy) -> Unit,
     modifier: Modifier = Modifier,
+
 ) {
     var shouldShowSortSection by remember { mutableStateOf(false) }
 
     Column(
-        modifier = modifier,
+        modifier = modifier.background(GrayLight),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Row(
@@ -70,9 +73,7 @@ fun SortSection(
         CompositionLocalProvider(LocalContentColor provides MediaHeaderContentColor) {
             AnimatedVisibility(visible = shouldShowSortSection) {
                 SortSection(
-                    sortOrder = sortOrder,
                     sortBy = sortBy,
-                    onChangeSortOrder = onChangeSortOrder,
                     onChangeSortBy = onChangeSortBy,
                     radioButtonColors = RadioButtonDefaults.colors(
                         selectedColor = MediaHeaderContentColor,
@@ -123,9 +124,7 @@ private fun SortButton(
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun SortSection(
-    sortOrder: SortOrder,
     sortBy: SortBy,
-    onChangeSortOrder: (SortOrder) -> Unit,
     onChangeSortBy: (SortBy) -> Unit,
     modifier: Modifier = Modifier,
     radioButtonColors: RadioButtonColors = RadioButtonDefaults.colors(),
@@ -133,32 +132,7 @@ private fun SortSection(
     Column(modifier = modifier) {
         Text(
             modifier = Modifier.padding(horizontal = 8.dp),
-            text = stringResource(id = R.string.sort_order),
-            style = MaterialTheme.typography.titleMedium,
-        )
-
-        Row {
-            RadioButtonText(
-                modifier = Modifier.weight(1f),
-                textRes = R.string.ascending,
-                isSelected = sortOrder == SortOrder.ASCENDING,
-                onClick = { onChangeSortOrder(SortOrder.ASCENDING) },
-                colors = radioButtonColors,
-            )
-            RadioButtonText(
-                modifier = Modifier.weight(1f),
-                textRes = R.string.descending,
-                isSelected = sortOrder == SortOrder.DESCENDING,
-                onClick = { onChangeSortOrder(SortOrder.DESCENDING) },
-                colors = radioButtonColors,
-            )
-        }
-
-        Spacer(modifier = Modifier.height(4.dp))
-
-        Text(
-            modifier = Modifier.padding(horizontal = 8.dp),
-            text = stringResource(id = R.string.sort_by),
+            text = stringResource(id = R.string.sort_category),
             style = MaterialTheme.typography.titleMedium,
         )
 
@@ -181,6 +155,6 @@ private val sortByStringResourcesMap = mapOf(
     SortBy.PublishDate to R.string.date,
 )
 
-private val MediaHeaderContentColor = Color.White
+private val MediaHeaderContentColor = LightPurple
 
 private const val SortRotateValue = 180f

@@ -6,7 +6,7 @@
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
 
-    <string name="sort_by">Sort by</string>
+    <string name="sort_category">Sort Category</string>
     <string name="title">Title</string>
     <string name="date">Date</string>
 
