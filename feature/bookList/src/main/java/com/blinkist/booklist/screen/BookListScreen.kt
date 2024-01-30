@@ -51,6 +51,12 @@ fun BookListScreen(
                 viewModel.onEvent(BookListEvent.Refresh)
             },
         ) {
+            SortSection(
+                sortOrder = state.sortOder,
+                sortBy = state.sortBy,
+                onChangeSortOrder = {},
+                onChangeSortBy = {}
+            )
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(state.books) { book ->
                     BookItem(book = book, onItemClick = {})

@@ -177,8 +177,8 @@ private fun SortSection(
 }
 
 private val sortByStringResourcesMap = mapOf(
-    SortBy.TITLE to R.string.title,
-    SortBy.DATE to R.string.date,
+    SortBy.NAME to R.string.title,
+    SortBy.PublishDate to R.string.date,
 )
 
 private val MediaHeaderContentColor = Color.White
