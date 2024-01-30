@@ -24,13 +24,13 @@ class BooksViewModel @Inject constructor(
     var state by mutableStateOf(BookListState())
 
     init {
-        getAllBooks()
+        getAllBooks(true)
     }
 
     fun onEvent(event: BookListEvent) {
         when (event) {
             BookListEvent.Refresh -> {
-                getAllBooks()
+                getAllBooks(true)
             }
 
             is BookListEvent.OnChangeSortType -> {
@@ -45,9 +45,9 @@ class BooksViewModel @Inject constructor(
 
 
 
-    private fun getAllBooks() {
+    private fun getAllBooks(isRefresh: Boolean) {
         viewModelScope.launch {
-            getAllBooksUseCase(Unit).collect { result ->
+            getAllBooksUseCase(isRefresh).collect { result ->
                 when (result) {
                     is Result.Error -> {
                         state = state.copy(

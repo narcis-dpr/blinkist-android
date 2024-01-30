@@ -13,11 +13,11 @@ import javax.inject.Inject
 class GetAllBooksUseCase @Inject constructor(
     private val booksRepository: BooksRepository,
     dispatcher: DefaultDispatcherProvider
-) : FlowUseCase<Unit, List<Book>>(dispatcher.io) {
-    override fun execute(parameters: Unit): Flow<Result<List<Book>>> = flow {
+) : FlowUseCase<Boolean, List<Book>>(dispatcher.io) {
+    override fun execute(parameters: Boolean): Flow<Result<List<Book>>> = flow {
         try {
             emit(Result.Loading)
-            val result = booksRepository.getAllBooks()
+            val result = booksRepository.getAllBooks(parameters)
             emit(Result.Success(result))
         } catch (e: Exception) {
             emit(Result.Error(e))
