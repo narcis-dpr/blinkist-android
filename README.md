@@ -12,7 +12,7 @@ As you can see the view of the app is one single screen with a list of books.
 The stack of this application is kotlin and here is the list of the main tools that have been used for this project :Retrofit, Room, Hilt, Jetpack compose, junit, coroutines.
 The code base is multi module and here is a brief explanation of each module and their components :
 
-###1- Build Src :
+## 1- Build Src :
 
 The base module for every other parts of the app for managing depencies and libraries 
 
